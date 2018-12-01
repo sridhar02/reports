@@ -6,7 +6,33 @@
 \usepackage{setspace}
 \usepackage[a4paper,right=1in,left=1.5in,top=1in,bottom=1in]{geometry}
 
+\makeatletter
+
+\newcommand\frontmatter{%
+    \cleardoublepage
+  %\@mainmatterfalse
+  \pagenumbering{roman}}
+
+\newcommand\mainmatter{%
+    \cleardoublepage
+ % \@mainmattertrue
+  \pagenumbering{arabic}}
+
+\newcommand\backmatter{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+ % \@mainmatterfalse
+   }
+
+\makeatother
+
 \begin{document}
+
+\frontmatter
+
 \begin{titlepage}
 \begin{center}
 
@@ -76,16 +102,17 @@ PETROCHEMICAL ENGINEERING}
 
 \vspace{4em}
 
-I, (STUDENT NAME), hereby declare that this summer internship report entitled \\ “PROJECT TITLE” is original and has not previously formed the basis for the award of any degree to similar work.
+
+I, \textbf{KATTA SRIDHAR}, hereby declare that this summer internship report entitled “PROJECT TITLE” is original and has not previously formed the basis for the award of any degree to similar work.
 
 
 \vspace{5em}
 
-Place: KAKINADA  Signature
+\noindent Place: KAKINADA  \hfill Signature     \hspace{0.02\textwidth}
 
 \vspace{1em}
 
-DATE:                        {(Student name)}
+\noindent DATE: 1-12-2018  \hfill Katta Sridhar
 
 
 \newpage
@@ -100,6 +127,7 @@ DATE:                        {(Student name)}
 I would like to express my profound sense of gratitude to my guide and supervisor, Name, \textbf{Designation, Department, Industry,} for his skillful guidance, timely suggestions and encouragement in completing this project. (Others in industry who helped in the internship program may be mentioned)
 
 \vspace{1em}
+
 
 I acknowledge my sincere thanks and deep felt gratitude to \textbf{Prof. K.V.Rao}, Programme Director, Petroleum Courses, Jawaharlal Nehru Technological University Kakinada for arranging the summer internship program.
 
@@ -117,11 +145,16 @@ Finally, I am very much grateful to my parents for their financial support and e
 
 \vspace{1em}
 
-\textbf{\\ Student Name\\
-        (Roll number)}
+\hfill \textbf{Katta Sridhar}
+
+% TODO Center Roll Number w.r.t Name  
+\hfill \textbf{Roll number} \hspace{0.005\textwidth}
         
 \newpage        
 \tableofcontents
+
+\newpage
+\mainmatter
 
 \section{Section}
 
